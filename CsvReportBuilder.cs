@@ -1,4 +1,4 @@
-﻿namespace CodeAnalysisReport;
+﻿
 
 public class CsvReportBuilder
 {
