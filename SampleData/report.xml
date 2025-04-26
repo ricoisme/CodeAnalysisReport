@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="Testapp.csproj">
+      <Assembly Name="Testapp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="86" />
+          <Metric Name="CyclomaticComplexity" Value="84" />
+          <Metric Name="ClassCoupling" Value="94" />
+          <Metric Name="DepthOfInheritance" Value="2" />
+          <Metric Name="SourceLines" Value="525" />
+          <Metric Name="ExecutableLines" Value="150" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="&lt;global namespace&gt;">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="1" />
+              <Metric Name="ClassCoupling" Value="1" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="2" />
+              <Metric Name="ExecutableLines" Value="0" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Program">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="2" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="Testapp">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="79" />
+              <Metric Name="CyclomaticComplexity" Value="23" />
+              <Metric Name="ClassCoupling" Value="53" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="126" />
+              <Metric Name="ExecutableLines" Value="57" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Compiler">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="61" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="30" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="19" />
+                  <Metric Name="ExecutableLines" Value="12" />
+                </Metrics>
+                <Members>
+                  <Method Name="Assembly Compiler.Compile(string sourceCode, params Assembly[] referencedAssemblies)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="61" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="29" />
+                      <Metric Name="SourceLines" Value="16" />
+                      <Metric Name="ExecutableLines" Value="12" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="DynamicActionProvider">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="65" />
+                  <Metric Name="CyclomaticComplexity" Value="14" />
+                  <Metric Name="ClassCoupling" Value="20" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="61" />
+                  <Metric Name="ExecutableLines" Value="36" />
+                </Metrics>
+                <Members>
+                  <Field Name="List&lt;ControllerActionDescriptor&gt; DynamicActionProvider._actions" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="40">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Func&lt;string, IEnumerable&lt;ControllerActionDescriptor&gt;&gt; DynamicActionProvider._creator" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="41">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="DynamicActionProvider.DynamicActionProvider(IServiceProvider serviceProvider, ICompiler compiler)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="43">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="46" />
+                      <Metric Name="CyclomaticComplexity" Value="8" />
+                      <Metric Name="ClassCoupling" Value="15" />
+                      <Metric Name="SourceLines" Value="44" />
+                      <Metric Name="ExecutableLines" Value="31" />
+                    </Metrics>
+                  </Method>
+                  <Property Name="int DynamicActionProvider.Order" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="88">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="98" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int DynamicActionProvider.Order.get" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="88">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="98" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Method Name="void DynamicActionProvider.OnProvidersExecuted(ActionDescriptorProviderContext context)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="89">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void DynamicActionProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="90">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="86" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="6" />
+                      <Metric Name="SourceLines" Value="7" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void DynamicActionProvider.AddControllers(string sourceCode)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="97">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="94" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="DynamicChangeTokenProvider">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="88" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="8" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="23" />
+                  <Metric Name="ExecutableLines" Value="7" />
+                </Metrics>
+                <Members>
+                  <Field Name="CancellationTokenSource DynamicChangeTokenProvider._source" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="102">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="CancellationChangeToken DynamicChangeTokenProvider._token" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="103">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="DynamicChangeTokenProvider.DynamicChangeTokenProvider()" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="104">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="87" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="5" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="IChangeToken DynamicChangeTokenProvider.GetChangeToken()" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="109">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void DynamicChangeTokenProvider.NotifyChanges()" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="111">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="81" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void DynamicChangeTokenProvider.Dispose()" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="118">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ICompiler">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="SourceLines" Value="4" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Method Name="Assembly ICompiler.Compile(string sourceCode, params Assembly[] referencedAssemblies)" File="D:\GitHub\testci\Testapp\DynamicActionProvider.cs" Line="15">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ObjectExtension">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="81" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="10" />
+                  <Metric Name="ExecutableLines" Value="2" />
+                </Metrics>
+                <Members>
+                  <Method Name="string ObjectExtension.CapitalizeFirstLetter(string input)" File="D:\GitHub\testci\Testapp\ObjectExtension.cs" Line="5">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="81" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="7" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="Testapp.Controllers">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="75" />
+              <Metric Name="CyclomaticComplexity" Value="14" />
+              <Metric Name="ClassCoupling" Value="25" />
+              <Metric Name="DepthOfInheritance" Value="2" />
+              <Metric Name="SourceLines" Value="186" />
+              <Metric Name="ExecutableLines" Value="39" />
+            </Metrics>
+            <Types>
+              <NamedType Name="CacheController">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="80" />
+                  <Metric Name="CyclomaticComplexity" Value="6" />
+                  <Metric Name="ClassCoupling" Value="11" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="SourceLines" Value="82" />
+                  <Metric Name="ExecutableLines" Value="12" />
+                </Metrics>
+                <Members>
+                  <Field Name="ICacheService CacheController._cacheService" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="17">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="CacheController.CacheController(ICacheService cacheService)" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="96" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;bool&gt; CacheController.AddOrUpdate(UserDto userDto)" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="36">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="84" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="17" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;bool&gt; CacheController.Remove(string key)" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="52">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="80" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="15" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;UserDto&gt; CacheController.Get(string key)" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="68">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="83" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="15" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="RedisServer CacheController.GetServerInfo()" File="D:\GitHub\testci\Testapp\Controllers\CacheController.cs" Line="83">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="86" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="14" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ErrorController">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="74" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="12" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="SourceLines" Value="20" />
+                  <Metric Name="ExecutableLines" Value="8" />
+                </Metrics>
+                <Members>
+                  <Field Name="ILogger&lt;ErrorController&gt; ErrorController._logger" File="D:\GitHub\testci\Testapp\Controllers\ErrorController.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="ErrorController.ErrorController(ILogger&lt;ErrorController&gt; logger)" File="D:\GitHub\testci\Testapp\Controllers\ErrorController.cs" Line="16">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="96" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ErrorController.Write()" File="D:\GitHub\testci\Testapp\Controllers\ErrorController.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="77" />
+                      <Metric Name="CyclomaticComplexity" Value="3" />
+                      <Metric Name="ClassCoupling" Value="8" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="RoslynController">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="71" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="8" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="SourceLines" Value="31" />
+                  <Metric Name="ExecutableLines" Value="11" />
+                </Metrics>
+                <Members>
+                  <Field Name="DynamicActionProvider RoslynController._dynamicActionProvider" File="D:\GitHub\testci\Testapp\Controllers\RoslynController.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="DynamicChangeTokenProvider RoslynController._dynamicChangeTokenProvider" File="D:\GitHub\testci\Testapp\Controllers\RoslynController.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="RoslynController.RoslynController(DynamicActionProvider dynamicActionProvider, DynamicChangeTokenProvider dynamicChangeTokenProvider)" File="D:\GitHub\testci\Testapp\Controllers\RoslynController.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="bool RoslynController.Register(string controllerName)" File="D:\GitHub\testci\Testapp\Controllers\RoslynController.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="68" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="16" />
+                      <Metric Name="ExecutableLines" Value="7" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="WeatherForecastController">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="76" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="11" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="SourceLines" Value="41" />
+                  <Metric Name="ExecutableLines" Value="8" />
+                </Metrics>
+                <Members>
+                  <Field Name="string[] WeatherForecastController.Summaries" File="D:\GitHub\testci\Testapp\Controllers\WeatherForecastController.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="82" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="3" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ILogger&lt;WeatherForecastController&gt; WeatherForecastController._logger" File="D:\GitHub\testci\Testapp\Controllers\WeatherForecastController.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="IServiceProvider WeatherForecastController._serviceProvider" File="D:\GitHub\testci\Testapp\Controllers\WeatherForecastController.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="WeatherForecastController.WeatherForecastController(ILogger&lt;WeatherForecastController&gt; logger, IServiceProvider serviceProvider)" File="D:\GitHub\testci\Testapp\Controllers\WeatherForecastController.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="86" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="IEnumerable&lt;WeatherForecast&gt; WeatherForecastController.Get()" File="D:\GitHub\testci\Testapp\Controllers\WeatherForecastController.cs" Line="37">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="75" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="SourceLines" Value="18" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="Testapp.Models">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="98" />
+              <Metric Name="CyclomaticComplexity" Value="18" />
+              <Metric Name="ClassCoupling" Value="3" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="35" />
+              <Metric Name="ExecutableLines" Value="2" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Order">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="4" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Property Name="DateTimeOffset Order.ExpiryTime" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="DateTimeOffset Order.ExpiryTime.get" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Order.ExpiryTime.set" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="RedisServer">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="5" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Property Name="string RedisServer.Configuration" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="5">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string RedisServer.Configuration.get" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="5">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void RedisServer.Configuration.set" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="5">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string RedisServer.InstanceName" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="6">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string RedisServer.InstanceName.get" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="6">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void RedisServer.InstanceName.set" File="D:\GitHub\testci\Testapp\Models\RedisServer.cs" Line="6">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="UserDto">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="5" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Property Name="int UserDto.Id" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="5">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int UserDto.Id.get" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="5">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void UserDto.Id.set" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="5">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string UserDto.Name" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="6">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string UserDto.Name.get" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="6">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void UserDto.Name.set" File="D:\GitHub\testci\Testapp\Models\UserDto.cs" Line="6">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="WeatherForecast">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="93" />
+                  <Metric Name="CyclomaticComplexity" Value="8" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="11" />
+                  <Metric Name="ExecutableLines" Value="2" />
+                </Metrics>
+                <Members>
+                  <Property Name="DateOnly WeatherForecast.Date" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="8">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="DateOnly WeatherForecast.Date.get" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="8">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void WeatherForecast.Date.set" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="8">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int WeatherForecast.TemperatureC" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="10">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int WeatherForecast.TemperatureC.get" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="10">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void WeatherForecast.TemperatureC.set" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="10">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int WeatherForecast.TemperatureF" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="91" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int WeatherForecast.TemperatureF.get" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="12">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="91" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string? WeatherForecast.Summary" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string? WeatherForecast.Summary.get" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void WeatherForecast.Summary.set" File="D:\GitHub\testci\Testapp\Models\WeatherForecast.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="Testapp.Services">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="90" />
+              <Metric Name="CyclomaticComplexity" Value="28" />
+              <Metric Name="ClassCoupling" Value="32" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="176" />
+              <Metric Name="ExecutableLines" Value="52" />
+            </Metrics>
+            <Types>
+              <NamedType Name="CacheService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="77" />
+                  <Metric Name="CyclomaticComplexity" Value="6" />
+                  <Metric Name="ClassCoupling" Value="13" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="46" />
+                  <Metric Name="ExecutableLines" Value="14" />
+                </Metrics>
+                <Members>
+                  <Field Name="IDistributedCache CacheService._distributedCache" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="IConfiguration CacheService._configuration" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="21">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="CacheService.CacheService(IDistributedCache distributedCache, IConfiguration configuration)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;bool&gt; CacheService.AddOrUpdateAsync(UserDto userDto)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="77" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="8" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;UserDto&gt; CacheService.GetAsync(string key)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="39">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="77" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="8" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="RedisServer CacheService.GetServerInfo()" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="46">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="73" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="11" />
+                      <Metric Name="ExecutableLines" Value="4" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;bool&gt; CacheService.RemoveAsync(string key)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="58">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="SourceLines" Value="5" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ICacheService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="3" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="SourceLines" Value="8" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Method Name="Task&lt;bool&gt; ICacheService.AddOrUpdateAsync(UserDto userDto)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;bool&gt; ICacheService.RemoveAsync(string key)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;UserDto&gt; ICacheService.GetAsync(string key)" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="RedisServer ICacheService.GetServerInfo()" File="D:\GitHub\testci\Testapp\Services\CacheService.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="IOrderService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="SourceLines" Value="4" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Method Name="bool IOrderService.IsOrderExpired(Order order)" File="D:\GitHub\testci\Testapp\Services\OrderService.cs" Line="7">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="IUserService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="6" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="SourceLines" Value="8" />
+                  <Metric Name="ExecutableLines" Value="0" />
+                </Metrics>
+                <Members>
+                  <Method Name="Task&lt;int&gt; IUserService.UpsertAsync(UserDto userDto)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;int&gt; IUserService.DeleteAsync(int id)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;UserDto&gt; IUserService.GetAsync(int id)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;IEnumerable&lt;UserDto&gt;&gt; IUserService.GetsAsync()" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Method>
+                  <Property Name="SqliteConnection IUserService.Connection" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="15">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="SqliteConnection IUserService.Connection.get" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="15">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void IUserService.Connection.set" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="15">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="0" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="OrderService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="92" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="5" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="15" />
+                  <Metric Name="ExecutableLines" Value="2" />
+                </Metrics>
+                <Members>
+                  <Field Name="TimeProvider OrderService._timeProvider" File="D:\GitHub\testci\Testapp\Services\OrderService.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="OrderService.OrderService(TimeProvider timeProvider)" File="D:\GitHub\testci\Testapp\Services\OrderService.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="96" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="bool OrderService.IsOrderExpired(Order order)" File="D:\GitHub\testci\Testapp\Services\OrderService.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="92" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="UserService">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="70" />
+                  <Metric Name="CyclomaticComplexity" Value="9" />
+                  <Metric Name="ClassCoupling" Value="20" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="83" />
+                  <Metric Name="ExecutableLines" Value="36" />
+                </Metrics>
+                <Members>
+                  <Field Name="IConfiguration UserService._configuration" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="SqliteConnection UserService._sqliteConnection" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="21">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="0" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="UserService.UserService(IConfiguration configuration)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="79" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="SourceLines" Value="6" />
+                      <Metric Name="ExecutableLines" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Property Name="SqliteConnection UserService.Connection" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="1" />
+                      <Metric Name="ExecutableLines" Value="2" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="SqliteConnection UserService.Connection.get" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="30">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void UserService.Connection.set" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="30">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="SourceLines" Value="1" />
+                          <Metric Name="ExecutableLines" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Method Name="Task&lt;int&gt; UserService.DeleteAsync(int id)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="32">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="67" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="11" />
+                      <Metric Name="SourceLines" Value="13" />
+                      <Metric Name="ExecutableLines" Value="7" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;UserDto&gt; UserService.GetAsync(int id)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="46">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="67" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="12" />
+                      <Metric Name="SourceLines" Value="13" />
+                      <Metric Name="ExecutableLines" Value="7" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;IEnumerable&lt;UserDto&gt;&gt; UserService.GetsAsync()" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="60">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="73" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="11" />
+                      <Metric Name="SourceLines" Value="11" />
+                      <Metric Name="ExecutableLines" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Task&lt;int&gt; UserService.UpsertAsync(UserDto userDto)" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="72">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="61" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="12" />
+                      <Metric Name="SourceLines" Value="23" />
+                      <Metric Name="ExecutableLines" Value="11" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void UserService.Dispose()" File="D:\GitHub\testci\Testapp\Services\UserService.cs" Line="96">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>
