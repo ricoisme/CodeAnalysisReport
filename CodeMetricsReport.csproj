@@ -12,6 +12,9 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Update="SampleData\report.xml">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
         <None Update="SampleData\ScottPlot.Metrics.xml">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
