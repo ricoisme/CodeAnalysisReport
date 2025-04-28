@@ -1,77 +1,77 @@
 ﻿
 
 
-public class Rootobject
+public sealed class Rootobject
 {
     public Xml xml { get; set; }
     public Codemetricsreport CodeMetricsReport { get; set; }
 }
 
-public class Xml
+public sealed class Xml
 {
     public string version { get; set; }
     public string encoding { get; set; }
 }
 
-public class Codemetricsreport
+public sealed class Codemetricsreport
 {
     public string Version { get; set; }
     public Targets Targets { get; set; }
 }
 
-public class Targets
+public sealed class Targets
 {
     public Target Target { get; set; }
 }
 
-public class Target
+public sealed class Target
 {
     public string Name { get; set; }
     public Assembly Assembly { get; set; }
 }
 
-public class Assembly
+public sealed class Assembly
 {
     public string Name { get; set; }
     public Metrics Metrics { get; set; }
     public Namespaces Namespaces { get; set; }
 }
 
-public class Metrics
+public sealed class Metrics
 {
     public Metric[] Metric { get; set; }
 }
 
-public class Metric
+public sealed class Metric
 {
     public string Name { get; set; }
     public string Value { get; set; }
 }
 
-public class Namespaces
+public sealed class Namespaces
 {
     public Namespace[] Namespace { get; set; }
 }
 
-public class Namespace
+public sealed class Namespace
 {
     public string Name { get; set; }
     public Metrics1 Metrics { get; set; }
     public Types Types { get; set; }
 }
 
-public class Metrics1
+public sealed class Metrics1
 {
     public Metric1[] Metric { get; set; }
 }
 
-public class Metric1
+public sealed class Metric1
 {
     public string Name { get; set; }
     public string Value { get; set; }
 }
 
-public class Types
+public sealed class Types
 {
     public object NamedType { get; set; }
 }

@@ -1,6 +1,6 @@
 ﻿
 
-public class HtmlReportBuilder
+public sealed class HtmlReportBuilder
 {
     private readonly StringBuilder _sb = new StringBuilder();
 
@@ -10,14 +10,17 @@ public class HtmlReportBuilder
         if (!File.Exists(xmlFilePath))
             throw new FileNotFoundException(xmlFilePath);
 
-        string xmlText = File.ReadAllText(xmlFilePath);
-        XDocument doc = XDocument.Parse(xmlText);
-        XElement assemblyElement = doc.Descendants("Assembly").First();
+        var xmlText = File.ReadAllText(xmlFilePath);
+        var doc = XDocument.Parse(xmlText);
+        var assemblyElement = doc.Descendants("Assembly").First();
 
         AddAssemblyInfo(assemblyElement);
 
-        TypeMetrics[] typeMetrics = GetAllTypeMetrics(assemblyElement);
+        var typeMetrics = GetAllTypeMetrics(assemblyElement);
         AddTypeInfo(typeMetrics);
+
+        var memberMetrics = GetMemberMetricsAsTypeMetrics(assemblyElement);
+        AddMemberInfoAsTypeMetrics(memberMetrics);
     }
 
     private static string StripHtml(string s) => s
@@ -54,7 +57,7 @@ public class HtmlReportBuilder
 
     public void SaveAs(string path)
     {
-        string html = @"<!doctype html>
+        var html = @"<!doctype html>
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
@@ -76,16 +79,16 @@ public class HtmlReportBuilder
 
     void AddAssemblyInfo(XElement assemblyElement)
     {
-        string[] assemblyParts = assemblyElement.Attribute("Name")!.Value.Split(", ");
-        string assemblyName = assemblyParts[0];
-        string assemblyVersion = assemblyParts[1].Split("=")[1];
+        var assemblyParts = assemblyElement.Attribute("Name")!.Value.Split(", ");
+        var assemblyName = assemblyParts[0];
+        var assemblyVersion = assemblyParts[1].Split("=")[1];
 
         AddHeading("Assembly Metrics", 3);
         AddParagraph($"Assembly: <code>{assemblyName} {assemblyVersion}</code>");
         foreach (XElement metric in assemblyElement.Element("Metrics")!.Descendants())
         {
-            string name = metric.Attribute("Name")!.Value;
-            int value = int.Parse(metric.Attribute("Value")!.Value.ToString());
+            var name = metric.Attribute("Name")!.Value;
+            var value = int.Parse(metric.Attribute("Value")!.Value.ToString());
             AddParagraph($"{name}: <code>{value:N0}</code>");
         }
     }
@@ -96,7 +99,7 @@ public class HtmlReportBuilder
 
         foreach (XElement namespaceElement in assembly.Element("Namespaces")!.Elements("Namespace"))
         {
-            string typeNamespace = namespaceElement.Attribute("Name")!.Value;
+            var typeNamespace = namespaceElement.Attribute("Name")!.Value;
             foreach (XElement namedType in namespaceElement.Elements("Types").Elements("NamedType"))
             {
                 TypeMetrics metrics = new(namedType, typeNamespace);
@@ -105,6 +108,61 @@ public class HtmlReportBuilder
         }
 
         return typeMetrics.ToArray();
+    }
+
+    List<TypeMetrics> GetMemberMetricsAsTypeMetrics(XElement assembly)
+    {
+        var allMemberMetrics = new List<TypeMetrics>();
+
+        foreach (XElement namespaceElement in assembly.Element("Namespaces")!.Elements("Namespace"))
+        {
+            var typeNamespace = namespaceElement.Attribute("Name")!.Value;
+            foreach (XElement namedType in namespaceElement.Elements("Types").Elements("NamedType"))
+            {
+                var typeName = namedType.Attribute("Name")!.Value;
+                var fullTypeName = $"{typeNamespace}.{typeName}";
+
+                var membersElement = namedType.Element("Members");
+                if (membersElement != null)
+                {
+                    foreach (XElement memberElement in membersElement.Elements())
+                    {
+                        var memberName = memberElement.Attribute("Name")?.Value;
+                        var memberType = memberElement.Name.LocalName;
+
+                        if (!string.IsNullOrEmpty(memberName) && memberType is "Method" or "Field" or "Property")
+                        {
+                            TypeMetrics memberMetrics = CreateMemberTypeMetrics(memberElement, fullTypeName, memberType);
+                            allMemberMetrics.Add(memberMetrics);
+                        }
+                    }
+                }
+            }
+        }
+
+        return allMemberMetrics;
+    }
+
+    private TypeMetrics CreateMemberTypeMetrics(XElement memberElement, string fullTypeName, string memberType)
+    {
+        var memberName = memberElement.Attribute("Name")!.Value;
+        // 臨时的 XElement 來模擬 TypeMetrics 的建構子輸入
+        var tempElement = new XElement("NamedType",
+            new XAttribute("Name", memberName),
+            new XElement("Metrics", memberElement.Element("Metrics")?.Elements()) // 複製度量元素
+        );
+        var memberMetrics = new TypeMetrics(tempElement, fullTypeName);
+        return new TypeMetrics(
+            memberName, // 使用成員名稱作為 TypeName
+            fullTypeName, // 使用完整的類型名稱作為 TypeNamespace
+            $"{fullTypeName}.{memberName}", // 組合 FullTypeName
+            memberMetrics.MaintainabilityIndex,
+            memberMetrics.CyclomaticComplexity,
+            memberMetrics.SourceLines,
+            memberMetrics.ExecutableLines,
+            memberMetrics.ClassCoupling,
+            memberType
+        );
     }
 
     void AddTypeInfo(TypeMetrics[] metricsByType)
@@ -131,6 +189,39 @@ public class HtmlReportBuilder
             _sb.AppendLine($"<td style='background-color: {metrics.ClassCouplingColor};'>{metrics.ClassCoupling}</td>");
             _sb.AppendLine($"<td style='background-color: {metrics.SourceLinesColor};'>{metrics.SourceLines}</td>");
             _sb.AppendLine($"<td style='background-color: {metrics.ExecutableLinesColor};'>{metrics.ExecutableLines}</td>");
+            _sb.AppendLine("</tr>");
+        }
+
+        _sb.AppendLine("</table>");
+    }
+
+    void AddMemberInfoAsTypeMetrics(List<TypeMetrics> memberMetrics)
+    {
+        AddHeading("Metrics by Member", 3);
+
+        _sb.AppendLine("<table>");
+        _sb.AppendLine("<tr>");
+        _sb.AppendLine("<th><b>Name</b></th>");
+        _sb.AppendLine("<th><b>Type</b></th>"); // 新增 Type 欄位
+        _sb.AppendLine("<th><b>Container Type</b></th>"); // 新增 Container Type 欄位
+        _sb.AppendLine("<th><b>Maintainability</b></th>");
+        _sb.AppendLine("<th><b>Complexity</b></th>");
+        _sb.AppendLine("<th><b>Lines of Code</b></th>");
+        _sb.AppendLine("<th><b>Executable Lines</b></th>");
+        _sb.AppendLine("<th><b>Class Coupling</b></th>");
+        _sb.AppendLine("</tr>");
+
+        foreach (var memberMetric in memberMetrics)
+        {
+            _sb.AppendLine("<tr>");
+            _sb.AppendLine($"<td><code>{memberMetric.TypeName}</code></td>");
+            _sb.AppendLine($"<td><code>{memberMetric.MemberType}</code></td>"); // 顯示成員類型
+            _sb.AppendLine($"<td><code>{memberMetric.TypeNamespace}</code></td>"); // 顯示容器類型
+            _sb.AppendLine($"<td style='background-color: {memberMetric.MaintainabilityIndexColor};'>{memberMetric.MaintainabilityIndex}</td>");
+            _sb.AppendLine($"<td style='background-color: {memberMetric.CyclomaticComplexityColor};'>{memberMetric.CyclomaticComplexity}</td>");
+            _sb.AppendLine($"<td style='background-color: {memberMetric.SourceLinesColor};'>{memberMetric.SourceLines}</td>");
+            _sb.AppendLine($"<td style='background-color: {memberMetric.ExecutableLinesColor};'>{memberMetric.ExecutableLines}</td>");
+            _sb.AppendLine($"<td style='background-color: {memberMetric.ClassCouplingColor};'>{memberMetric.ClassCoupling}</td>");
             _sb.AppendLine("</tr>");
         }
 

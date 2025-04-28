@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CodeMetricsReport": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\SampleData\\report.xml .\\report.csv"
+    }
+  }
+}

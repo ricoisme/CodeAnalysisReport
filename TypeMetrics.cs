@@ -3,6 +3,7 @@
     public string TypeName { get; }
     public string TypeNamespace { get; }
     public string FullTypeName { get; }
+    public string? MemberType { get; }
 
     public int MaintainabilityIndex { get; }
     public string MaintainabilityIndexColor
@@ -61,14 +62,28 @@
     }
 
     private static string Green => "#d1e7dd00";
-    private static string Yellow => "#f18307";
-    private static string Red => "#f8d7da";
+    private static string Yellow => "#415f01";
+    private static string Red => "#ca3505";
+
+    public TypeMetrics(string typeName, string typeNamespace, string fullTypeName, int maintainabilityIndex, int cyclomaticComplexity, int sourceLines, int executableLines, int classCoupling, string? memberType = null)
+    {
+        TypeName = typeName;
+        TypeNamespace = typeNamespace;
+        FullTypeName = fullTypeName;
+        MaintainabilityIndex = maintainabilityIndex;
+        CyclomaticComplexity = cyclomaticComplexity;
+        SourceLines = sourceLines;
+        ExecutableLines = executableLines;
+        ClassCoupling = classCoupling;
+        MemberType = memberType;
+    }
 
     public TypeMetrics(XElement namedTypeElement, string typeNamespace)
     {
         TypeNamespace = typeNamespace;
         TypeName = namedTypeElement.Attribute("Name")!.Value.ToString();
         FullTypeName = TypeNamespace + "." + TypeName;
+        MemberType = null;
 
         foreach (XElement metric in namedTypeElement.Element("Metrics")!.Elements("Metric"))
         {
